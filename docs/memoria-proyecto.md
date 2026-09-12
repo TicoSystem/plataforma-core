@@ -345,7 +345,11 @@ Ejemplo: feature/3-modelo-gasto
 
 - [ ] Decidir el nombre real de la marca paraguas (ahora "Nimbus Apps" como placeholder)
 - [ ] Definir el número exacto de meses para el programa de referidos
-- [ ] Generar los 24 planes maestros con ChatGPT (en curso)
+- [x] Instalar Pest en plataforma-core (pestphp/pest + pestphp/pest-plugin-laravel --with-all-dependencies)
+- [x] CI en verde verificado con PR #1 (Pest + Vitest funcionando)
+- [x] Documentación subida a plataforma-core/docs/ vía PR #1
+- [x] 24 planes maestros generados con ChatGPT (GPT-4o) y subidos a plataforma-core/docs/planes-maestros/ vía PR #2
+- [x] Los 5 planes divididos en 2 partes fueron fusionados antes de subir (Control de Gastos, Bitácora de Vehículos, Control de Inventario B2B, Diario Fitness y Calorías, Gestor de Suscripciones)
 - [ ] Crear `plataforma-ui` (Paso 4 de la Fase 1)
 - [ ] Crear `plataforma-ops` (Paso 5 de la Fase 1)
 - [ ] Crear GitHub Projects en dos niveles (portfolio + por app)
@@ -374,4 +378,9 @@ Ejemplo: feature/3-modelo-gasto
 - Se creó `plataforma-core` completo y subido a GitHub como Template público
 - Se realizó estudio de mercado de 24 apps con ChatGPT
 - Se generaron 24 prompts de plan maestro rellenos
-- Los planes maestros están generándose con ChatGPT (en curso)
+- Pest instalado en plataforma-core con --with-all-dependencies
+- ExampleTest.php simplificado para pasar en CI
+- CI verificado en verde con PR #1
+- 3 documentos de proyecto subidos a plataforma-core/docs/ vía PR #1
+- 24 planes maestros generados con ChatGPT (GPT-4o) subidos a plataforma-core/docs/planes-maestros/ vía PR #2
+- main local sincronizado con origin/main (HEAD en e3b6fb1)

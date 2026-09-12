@@ -174,7 +174,7 @@
 
 | Estado | Tarea | Para qué sirve |
 |---|---|---|
-| ⬜ | Añadir test de ejemplo con Pest en plataforma-core | Que cada app nueva nazca con un test de backend ya montado |
+| ✅ | Instalar Pest en plataforma-core (--with-all-dependencies) | Necesario para que el CI pueda correr los tests de backend |
 | ⬜ | Añadir test de ejemplo con Vitest en plataforma-ui | Que los componentes compartidos tengan cobertura desde el primer día |
 | ⬜ | Añadir test e2e de ejemplo con Playwright en plataforma-core | El "camino feliz" de cada app ya tiene estructura, solo hay que rellenarlo |
 | ⬜ | Verificar que el CI corre los 3 tipos de test | El workflow ci.yml debe ejecutar Pest, Vitest y Playwright sin errores |
@@ -224,7 +224,7 @@
 
 | Estado | Tarea | Para qué sirve |
 |---|---|---|
-| ⬜ | Generar plan maestro con GPT (prompt ya preparado) | Documento estratégico de 6 secciones: base del desarrollo |
+| ✅ | Generar plan maestro con GPT (prompt ya preparado) | Documento estratégico de 6 secciones: base del desarrollo — 24 planes completados y en plataforma-core/docs/planes-maestros/ |
 | ⬜ | Crear repo desde plataforma-core template | El repositorio de la app, ya con todo configurado |
 | ⬜ | Guardar plan-maestro.md en docs/ | Que Claude en Cursor lo lea como contexto al programar |
 | ⬜ | Claude desglosa Fase 1 en issues (gh CLI) | Convertir el plan abstracto en tareas concretas y accionables |
