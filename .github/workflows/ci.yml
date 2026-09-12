@@ -35,9 +35,6 @@ jobs:
       - name: Install Composer dependencies
         run: composer install --no-interaction --prefer-dist --optimize-autoloader
 
-      - name: Install Pest
-        run: composer require pestphp/pest pestphp/pest-plugin-laravel --dev --no-interaction
-
       - name: Copy .env
         run: cp .env.example .env
 
