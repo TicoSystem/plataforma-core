@@ -48,11 +48,15 @@ Ver documento detallado: `docs/fase1-paso3-plataforma-core.md`
 - ✅ PWA offline-first configurada (vite-plugin-pwa + Workbox)
 - ✅ Estructura de carpetas de dominio creada
 - ✅ Dependencias: Sanctum, spatie/laravel-data, Pinia, Vue Router 4
+- ✅ Pest instalado con pestphp/pest-plugin-laravel (--with-all-dependencies)
+- ✅ ExampleTest.php simplificado para pasar en CI
 - ✅ Componentes base: App.vue, Home.vue
 - ✅ Blade conectado con Vue (welcome.blade.php)
 - ✅ Subido a GitHub como Repo Template público (github.com/TicoSystem/plataforma-core)
 - ✅ Reusable Workflows: ci.yml, move-to-in-progress.yml, release-please.yml
+- ✅ CI funcionando en verde (Pest + Vitest) verificado con PR #1
 - ✅ Branch protection: PR obligatorio + CI en verde + sin push directo a main
+- ✅ Documentación subida a docs/ (plan-de-trabajo.md, checklist.md, memoria-proyecto.md) vía PR #1
 
 ### ⬜ Paso 4 — Crear `plataforma-ui` (Sistema de diseño compartido)
 > **Origen**: Punto 7 (Sistema de diseño compartido) del entorno de trabajo
@@ -109,6 +113,7 @@ Ver documento detallado: `docs/fase1-paso3-plataforma-core.md`
 - ⬜ Configurar backups automáticos en Coolify (frecuencia semanal por defecto)
 - ⬜ Configurar rclone + cuenta de servicio Google para Google Drive
 - ⬜ Verificar que Coolify también respalda su propia configuración
+- ⬜ Probar una restauración completa
 
 ---
 
@@ -117,13 +122,14 @@ Ver documento detallado: `docs/fase1-paso3-plataforma-core.md`
 
 ### ⬜ Paso 11 — Gestión de secretos
 - ⬜ Configurar GitHub Organization Secrets para CI/CD
-- ⬜ Documentar la convención `{APP}_{CATEGORIA}_{DETALLE}` en CONVENTIONS.md
-- ⬜ Crear `.env.example` estándar para plataforma-core
+- ⬜ Crear CORE_NPM_TOKEN en Organization Secrets
+- ⬜ Documentar convención de nombres en CONVENTIONS.md
+- ⬜ Actualizar .env.example de plataforma-core
 
 ### ⬜ Paso 12 — Testing
-- ⬜ Añadir scaffolding de Pest a plataforma-core (tests de ejemplo)
-- ⬜ Añadir scaffolding de Vitest a plataforma-ui
-- ⬜ Añadir scaffolding de Playwright a plataforma-core (test e2e de ejemplo)
+- ⬜ Mejorar test de ejemplo con Pest (test real de plataforma-core)
+- ⬜ Añadir scaffolding de Vitest en plataforma-ui
+- ⬜ Añadir scaffolding de Playwright en plataforma-core
 - ⬜ Verificar que el CI corre los 3 tipos de test correctamente
 
 ### ⬜ Paso 13 — Autenticación y legal
@@ -142,13 +148,11 @@ Ver documento detallado: `docs/fase1-paso3-plataforma-core.md`
 
 ## FASE 4 — The Dev Hub (panel de control del portfolio)
 > **Origen**: Puntos 2 (GitHub — tablero), 18 (Presupuesto) del entorno de trabajo
-> The Dev Hub es la app #3 de las 25, construida con el mismo core
 
 ### ⬜ Paso 15 — Construir The Dev Hub
 - ⬜ Crear repo desde plataforma-core template
 - ⬜ Integrar APIs: GitHub, Coolify/Sentinel, PostHog, Sentry
-- ⬜ Módulo de gastos: VPS OVH, tiendas, dominio, Stripe, Twilio
-- ⬜ Módulo de ingresos por app
+- ⬜ Módulo de gastos e ingresos
 - ⬜ Motor de recomendaciones (reglas simples)
 - ⬜ Backlog de mejoras de infraestructura
 - ⬜ Scheduler de Laravel para refrescar datos periódicamente
@@ -158,55 +162,37 @@ Ver documento detallado: `docs/fase1-paso3-plataforma-core.md`
 ## FASE 5 — Por cada app nueva (repetir 25 veces)
 > **Origen**: Puntos 3 (Uso de IAs), 4 (Publicación), 5 (Pricing), 6 (BD), 10 (Auth), 11 (Legal) del entorno de trabajo
 
-### ⬜ Paso 16 — Generar el plan maestro con GPT
-- ⬜ Usar prompt de `docs/prompts-plan-maestro-24-apps-rellenos.md`
-- ⬜ Pegar en ChatGPT (GPT-4o, una conversación separada por app)
-- ⬜ Guardar resultado como `docs/plan-maestro.md` en el repo de la app
+### 🔄 Paso 16 — Generar el plan maestro con GPT
+- ✅ Estudio de mercado completado (24 apps, excluyendo The Dev Hub)
+- ✅ 24 prompts rellenos generados (archivo prompts-plan-maestro-24-apps-rellenos.md)
+- ✅ 24 planes maestros generados con ChatGPT (GPT-4o) y subidos a plataforma-core/docs/planes-maestros/ vía PR #2
 
 ### ⬜ Paso 17 — Crear el repo y desarrollar con Claude en Cursor
 - ⬜ `gh repo create TicoSystem/{app} --template=TicoSystem/plataforma-core --private`
 - ⬜ Abrir en Cursor, referenciar `@docs/plan-maestro.md`
 - ⬜ Claude desglosa la Fase 1 en issues y las crea con gh CLI
-- ⬜ Ciclo: rama → Claude programa → commit (Conventional Commits) → PR → CI → merge
-- ⬜ Aplicar criterios transversales: español, WCAG AA, empty state guiado, pricing beta
+- ⬜ Ciclo: rama → Claude programa → commit → PR → CI → merge
 
 ### ⬜ Paso 18 — Pricing y monetización
 - ⬜ Configurar Stripe (modo test en beta)
 - ⬜ Configurar Twilio/WhatsApp para verificación por teléfono
-- ⬜ Implementar flujo beta: pago único 2€/1€ + cupo de usuarios
-- ⬜ Implementar freemium en fase estable
+- ⬜ Implementar flujo beta y freemium en fase estable
 
 ### ⬜ Paso 19 — Testing, despliegue y publicación
-- ⬜ Escribir feature tests de la lógica única de la app
-- ⬜ Escribir el e2e del camino feliz (Playwright)
-- ⬜ Desplegar en Coolify (BD independiente, secretos, backups)
+- ⬜ Escribir feature tests y e2e del camino feliz
+- ⬜ Desplegar en Coolify
 - ⬜ Publicar como PWA instalable primero
-- ⬜ Graduar a Capacitor+tienda cuando la app despegue (según PostHog en The Dev Hub)
+- ⬜ Graduar a Capacitor+tienda cuando la app despegue
 
 ---
 
 ## FASE 6 — Gestión continua
-> **Origen**: Puntos 19 (Soporte), 20 (Gestión del tiempo), 21 (Gestión del tiempo) del entorno de trabajo
+> **Origen**: Puntos 19 (Soporte), 20 (Gestión del tiempo) del entorno de trabajo
 
 ### ⬜ Paso 20 — Ritmo de trabajo semanal
-- Lunes-Jueves: bloque de construcción (app más adelantada)
-- Viernes: mantenimiento + soporte + revisión del portfolio en The Dev Hub
-- Regla: no abrir app nueva sin cerrar/pausar la actual
-
 ### ⬜ Paso 21 — Soporte al usuario
-- ⬜ Crear email centralizado (soporte@nimbusapps.com o similar)
-- ⬜ Integrar formulario de contacto en plataforma-ui
-- ⬜ Crear GitHub Project para gestión de soporte
-
-### ⬜ Paso 22 — Identidad de marca
-- ⬜ Decidir el nombre real de la marca paraguas (ahora "Nimbus Apps" como placeholder)
-- ⬜ Diseñar logo de la marca paraguas
-- ⬜ Aplicar identidad visual de cada app individualmente
-
-### ⬜ Paso 23 — Documentar convenciones para Claude en Cursor
-- ⬜ Generar `CONVENTIONS.md` con todas las decisiones técnicas
-- ⬜ Añadirlo a plataforma-core para que lo hereden todas las apps
-- ⬜ Referenciar desde `.cursorrules` para que Claude en Cursor lo lea automáticamente
+### ⬜ Paso 22 — Identidad de marca (decidir nombre real de la marca paraguas)
+### ⬜ Paso 23 — Generar CONVENTIONS.md y configurar .cursorrules
 
 ---
 
@@ -217,13 +203,13 @@ Ver documento detallado: `docs/fase1-paso3-plataforma-core.md`
    🔄 Paso 2: GitHub Organization (en curso)
 
 🔄 Fase 1 — Núcleo técnico reutilizable (en curso)
-   ✅ Paso 3: plataforma-core completo
+   ✅ Paso 3: plataforma-core completo y funcionando
    ⬜ Paso 4: plataforma-ui
    ⬜ Paso 5: Automatización GitHub Projects
 
 ⬜ Fase 2 — Infraestructura y hosting
 ⬜ Fase 3 — Convenciones transversales
 ⬜ Fase 4 — The Dev Hub
-⬜ Fase 5 — Por cada app nueva (x25)
+🔄 Fase 5 — Por cada app nueva (planes maestros completados, pendiente construir apps)
 ⬜ Fase 6 — Gestión continua
 ```
