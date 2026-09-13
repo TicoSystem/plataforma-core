@@ -123,8 +123,8 @@
 - ✅ Estudio de mercado de 24 apps completado
 
 **Pendiente inmediato:**
-- ⬜ Paso 4 (Fase 1): crear plataforma-ui
-- ⬜ Paso 5 (Fase 1): GitHub Projects en dos niveles + plataforma-ops
+- ✅ Paso 4 (Fase 1): plataforma-ui v0.1.1 publicada en GitHub Packages (8 componentes Vue, WCAG AA, Vitest, GitHub Packages)
+- ⬜ Paso 5 (Fase 1): GitHub Projects en dos niveles + plataforma-ops (siguiente paso)
 - ⬜ Fase 2 completa: Coolify en local → VPS OVH → observabilidad → backups
 - ⬜ CONVENTIONS.md (pendiente desde el principio)
 - ⬜ Decidir nombre real de la marca paraguas (ahora "Nimbus Apps" como placeholder)

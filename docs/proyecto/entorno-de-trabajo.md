@@ -168,7 +168,7 @@
 ## 7. Sistema de diseño compartido (`plataforma-ui`)
 **→ Se ejecuta en: Fase 1, Paso 4**
 
-- **Repo**: `TicoSystem/plataforma-ui` (⬜ pendiente de crear)
+- **Repo**: `TicoSystem/plataforma-ui` ✅ (github.com/TicoSystem/plataforma-ui, v0.1.1 publicada)
 - **Distribución**: paquete npm versionado en GitHub Packages
 - **Componentes base**: Button, Input, Card, Modal, Table, Badge, Toast, EmptyState
 - **Identidad visual por app**: variables CSS (`--color-primary`, etc.) sin tocar el código

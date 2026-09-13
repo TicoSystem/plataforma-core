@@ -204,7 +204,7 @@ Ver documento detallado: `docs/fase1-paso3-plataforma-core.md`
 
 🔄 Fase 1 — Núcleo técnico reutilizable (en curso)
    ✅ Paso 3: plataforma-core completo y funcionando
-   ⬜ Paso 4: plataforma-ui
+   ✅ Paso 4: plataforma-ui v0.1.1 publicada en GitHub Packages
    ⬜ Paso 5: Automatización GitHub Projects
 
 ⬜ Fase 2 — Infraestructura y hosting
