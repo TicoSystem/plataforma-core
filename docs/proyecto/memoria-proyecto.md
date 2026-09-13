@@ -108,7 +108,7 @@
 |---|---|---|
 | `.github` | ✅ Creado | Plantillas de PR e Issues para toda la org |
 | `plataforma-core` | ✅ Creado y público | Repo Template con Laravel+Sail+Vue3+PWA+PostgreSQL |
-| `plataforma-ui` | ⬜ Pendiente | Sistema de diseño compartido (componentes Vue) |
+| `plataforma-ui` | ✅ Publicada v0.1.1 | Sistema de diseño: Button, Input, Card, Modal, Table, Badge, Toast, EmptyState |
 | `plataforma-ops` | ⬜ Pendiente | Scripts gh CLI para operar sobre las 26 apps |
 
 ### Configuración de `plataforma-core`

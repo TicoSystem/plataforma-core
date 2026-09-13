@@ -66,11 +66,11 @@
 | ✅ | Añadir release-please.yml | Versión y changelog automáticos al fusionar PRs a main |
 | ✅ | Configurar branch protection | PR obligatorio + CI en verde antes de poder fusionar a main |
 
-### Paso 4 — `plataforma-ui` ⬜ PENDIENTE
+### Paso 4 — `plataforma-ui` ✅ COMPLETADO (v0.1.1 publicada en GitHub Packages)
 
 | Estado | Tarea | Para qué sirve |
 |---|---|---|
-| ⬜ | Crear repo `TicoSystem/plataforma-ui` | Repo dedicado al sistema de diseño compartido |
+| ✅ | Crear repo `TicoSystem/plataforma-ui` | Repo dedicado al sistema de diseño compartido |
 | ⬜ | Configurar como paquete npm en GitHub Packages | Que las 26 apps lo instalen como dependencia, igual que cualquier librería |
 | ⬜ | Crear componente Button.vue | Botón reutilizable con variantes (primary, secondary, danger) |
 | ⬜ | Crear componente Input.vue | Campo de texto reutilizable con validación y estados de error |
