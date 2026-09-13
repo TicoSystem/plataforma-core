@@ -66,3 +66,5 @@ jobs:
 
       - name: Run Vitest
         run: npm run test --if-present
+        env:
+          LARAVEL_BYPASS_ENV_CHECK: 1
