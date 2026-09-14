@@ -18,6 +18,53 @@ jobs:
       - name: Mover tarjeta a En desarrollo
         if: steps.extract.outputs.issue != ''
         run: |
+          ITEM_ID=$(gh api graphql -f query='
+            query($owner:String!, $number:Int!, $issue:Int!) {
+              organization(login:$owner) {
+                projectV2(number:$number) {
+                  items(first:100) {
+                    nodes {
+                      id
+                      content { ... on Issue { number } }
+                    }
+                  }
+                }
+              }
+            }' -f owner=TicoSystem -F number=1 -F issue=${{ steps.extract.outputs.issue }} \
+            --jq '.data.organization.projectV2.items.nodes[] | select(.content.number==$issue) | .id')
+
+          gh api graphql -f query='
+            mutation($project:ID!, $item:ID!, $field:ID!, $value:String!) {
+              updateProjectV2ItemFieldValue(input:{
+                projectId:$project, itemId:$item,
+                fieldId:$field, value:{singleSelectOptionId:$value}
+              }) { projectV2Item { id } }
+            }' \
+            -f project=PVT_kwDOE47YPs4Bjbcr \
+            -f item=$ITEM_ID \
+            -f field=PVTSSF_lADOE47YPs4BjbcrzhiPwwI \
+            -f value=47fc9ee4
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}name: Mover issue a En desarrollo
+
+on:
+  create:
+
+jobs:
+  move-card:
+    if: github.ref_type == 'branch' && startsWith(github.ref_name, 'feature/')
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Extraer número de issue del nombre de la rama
+        id: extract
+        run: |
+          ISSUE_NUM=$(echo "${{ github.ref_name }}" | grep -oP '(?<=feature/)\d+')
+          echo "issue=$ISSUE_NUM" >> $GITHUB_OUTPUT
+
+      - name: Mover tarjeta a En desarrollo
+        if: steps.extract.outputs.issue != ''
+        run: |
           gh issue edit ${{ steps.extract.outputs.issue }} \
             --repo ${{ github.repository }}
         env:
