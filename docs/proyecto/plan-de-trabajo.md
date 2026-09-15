@@ -11,23 +11,27 @@
 > **Origen**: Punto 1 (Editor de código) y Punto 2 (GitHub) del entorno de trabajo
 
 ### ✅ Paso 1 — Editor de código (Cursor)
-- ✅ Instalado Cursor 3.20.10 en Ubuntu desde cursor.com
-- ✅ Importada configuración desde VS Code
-- ✅ Instaladas 32 extensiones (lista en `docs/lista-extensiones-cursor.md`)
-- ✅ Configurado `settings.json` (Prettier, Tailwind, ESLint, PHP, Python, word wrap, autoguardado)
-- ✅ Idioma cambiado a español
-- ✅ GitHub conectado desde Cursor
-- ✅ Privacy Mode activado (código no se usa para entrenar modelos)
+> Documento final: [`docs/fases/fase0-paso1-cursor.md`](https://github.com/TicoSystem/plataforma-core/blob/main/docs/fases/fase0-paso1-cursor.md)
+> Reescrito y re-verificado en vivo (100% real) el 15/09/2026 — sustituye
+> el resumen anterior de este punto.
 
-**Pendiente de definir/revisar** (notas de Juan, 14/09/2026):
-- ⬜ Aclarar el comportamiento exacto del autoguardado (¿al ir escribiendo, al cerrar el archivo, o al perder el foco?) y decidir cuál se quiere
-- ⬜ Documentar en detalle cómo se conectó GitHub desde Cursor (o cómo se debería conectar, si hay que rehacerlo)
-- ⬜ Auditar las 32 extensiones instaladas: ¿todas son necesarias?, ¿falta alguna que merezca la pena?, configurarlas correctamente (PHP Intelephense está marcando error constantemente)
+- ✅ Cursor 3.20.10 instalado en Ubuntu vía `.deb` desde cursor.com (repo APT autoconfigurado, actualizaciones vía `apt upgrade`)
+- ✅ Primer arranque verificado (instalación no limpia, sesión ya iniciada)
+- ✅ 33 extensiones auditadas; desinstaladas 5 sin uso (soporte de Python); quedan 28, todas correspondientes al stack Laravel+Vue+Docker
+- ✅ `settings.json` revisado y corregido: autoguardado cambiado a `onFocusChange` (mejor con Vite/HMR que el `afterDelay` anterior), limpiados ajustes residuales de Python
+- ✅ Idioma español activo (con limitación conocida y confirmada de Cursor: el menú superior queda parcialmente en inglés, no es un error)
+- ✅ Privacy Mode activo y verificado (ZDR con proveedores; matices de Background Agent y detección de abuso documentados)
+- ✅ GitHub conectado y operativo (Review Provider, Source Control, historial de commits todo verificado)
 
-**Suscripciones activas**:
-- ChatGPT Plus (~20€/mes) — modo Work + investigación web + planes maestros
-- Cursor Pro (~20€/mes) — Claude+GPT en el editor
-- Claude.ai — plan gratuito
+**Resuelto** (antes en "pendiente de definir/revisar", 14/09/2026):
+- ✅ Autoguardado aclarado y decidido: `onFocusChange`
+- ✅ Conexión de GitHub desde Cursor documentada en detalle
+- ✅ Extensiones auditadas: 5 desinstaladas (Python sin uso), resto confirmado necesario
+
+**Suscripciones activas** (actualizado 15/09/2026):
+- Claude Pro — activo, no se renueva al finalizar el periodo actual
+- Cursor — Free Plan; se activará Cursor Pro cuando caduque Claude Pro
+- ChatGPT Plus — activo, en revisión (valorando consolidar todo en Cursor Pro; ver documento final para el detalle del razonamiento)
 
 ### 🔄 Paso 2 — Organización en GitHub (TicoSystem)
 - ✅ Organización TicoSystem creada en github.com/TicoSystem
@@ -214,7 +218,8 @@ Ver documento detallado: `docs/fase1-paso3-plataforma-core.md`
 ## ESTADO GLOBAL
 ```
 ✅ Fase 0 — Puesto de trabajo (parcialmente completada)
-   ✅ Paso 1: Cursor instalado y configurado
+   ✅ Paso 1: Cursor instalado y configurado — re-verificado 100% en vivo,
+      documento final en docs/fases/fase0-paso1-cursor.md
    🔄 Paso 2: GitHub Organization (en curso)
 
 🔄 Fase 1 — Núcleo técnico reutilizable (en curso)
