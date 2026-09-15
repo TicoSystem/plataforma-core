@@ -228,3 +228,18 @@ Ver documento detallado: `docs/fase1-paso3-plataforma-core.md`
 🔄 Fase 5 — Por cada app nueva (planes maestros completados, pendiente construir apps)
 ⬜ Fase 6 — Gestión continua
 ```
+NOTAS:
+1.- Al comenzar cada fase se deberá presentar un documento .md que indique que fase es y cual es su origen, asi como una descripción de cual es su función. También incluirá un check list con todos los pasos que la componen. Cada paso debe describir que es lo que hace, asi como cada uno de los comandos necesarios para realizarla. Si son varios deberan ir en un check list también y detallar que es lo que hace. En el chat se deberá explicar explicar detalladamente que es lo que se está haciendo en cada momento, con el objeto de saber     exactamente lo que realizamos. Al finalizar cada paso o cada subpaso deberá actualizarse automaticamente el md. Al finalizar cada paso se generara un documento con la TRANSCRIPCIÓN LITERAL DEL CHAT, PARA QUE SEA DESCARGADO, asi como el documento del paso correspondiente. Estos dos documentos se subiran y la ia los fusionará en uno unico, que será subido al directorio fase del arbol de directorio documents de github.
+Hay que tener en cuenta que cada paso se hará en uno o más chat con lo cual la ia debera dar las instrucinones precisas para continuar en otro chat si fura necesario. 
+2.- Ten en cuenta que todo esto también está pensado para enseñar a usuarios de un centro de dia a realizar este proyecto (limitado a dos apps que elijan) asi como para explotarlo  yo mismo (con la creación de las apps o vendiendo el proyecto) y aprender, con lo cual puedo pedirte cualquier documento. Te lo digo para que los documentos sean lo mas profesionales y educativos posible. Si hubiera que incluir capturas de pantallas deberás avisarme para realizarlas y subirlas a una carpeta que crearás (las subidas de imágenes en el chat están limitadas). En principio no hace falta mucha calidad en los documentos, a no ser que te lo pida para el centro o para una empresa o documentar una app a la venta. Deberá incluir presentaciones también en ese caso.
+
+3.- ESTADO GLOBAL.
+- Cada paso debe ir enlazado a su documento final correspondiente.
+- Al final de todos los pasos de una fase se fusionarán todos los documentos de cada paso en uno solo, dando lugar al documento de la fase.
+- Cada fase debe ir enlazada a su documento.
+- Al final de todas las fases se creará el documento del proyecto con la fusión de todos.
+
+**Suscripciones activas**:
+Hay que instalar chatgpt de escritorio y configurarlo para trabajar con work
+
+Seria conveniente configurar cada ia para que trabajen lo mejor posible

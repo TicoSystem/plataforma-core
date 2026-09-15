@@ -13,10 +13,10 @@
 - **Editor**: Cursor (fork de VS Code con Claude y GPT integrados)
 - **Instalación**: Ubuntu, desde cursor.com, archivo .deb
 - **Extensiones**: 32 extensiones instaladas (ver lista completa abajo)
-- **Configuración**: settings.json con Prettier, Tailwind, ESLint, PHP Intelephense, Pylance, word wrap, autoguardado
+- **Configuración**: settings.json con Prettier, Tailwind, ESLint, PHP Intelephense, Pylance, word wrap, autoguardado. Nota: Explicar como es el autoguardado (Si es segun se va creando el documento, cuando se cierra o cuando se pierde el foco), para decidir como quiero que sea.
 - **Idioma**: español
 - **Privacy Mode**: activado (código NO se usa para entrenar modelos)
-- **GitHub**: conectado desde Cursor
+- **GitHub**: conectado desde Cursor. Nota: Explicar detalladamente como se ha conectado o como se va a conectar.
 
 **Suscripciones:**
 - ChatGPT Plus (~20€/mes) — modo Work + investigación web + planes maestros
@@ -30,6 +30,8 @@
 *Frontend*: Vue (Official), Tailwind CSS IntelliSense, ESLint, Prettier, Auto Rename Tag, Material Icon Theme, npm Intellisense, Pretty TypeScript Errors
 
 *Backend*: Laravel, Laravel Blade Snippets, Laravel Extra Intellisense, Laravel Pint, PHP Debug, PHP Intelephense, Better Pest, Pylance, Python, Python Environments
+
+Nota: Configurar cada una de las extensiones, porque PHP Intelephense, por ejemplo, me marca error constantemente. Antes de configurarlas, ver si realmente todas son necesarias, si se puede prescindir de alguna, o si hay que instalar alguna más que merezca la pena
 
 ---
 
@@ -46,8 +48,8 @@
 |---|---|---|
 | `.github` | ✅ Creado | Plantillas de PR/Issues para toda la org |
 | `plataforma-core` | ✅ Creado | Repo Template con Laravel+Vue3+PWA+PostgreSQL |
-| `plataforma-ui` | ⬜ Pendiente (Fase 1, Paso 4) | Sistema de diseño compartido |
-| `plataforma-ops` | ⬜ Pendiente (Fase 1, Paso 5) | Scripts gh CLI para las 26 apps |
+| `plataforma-ui` | ⬜ Pendiente (Fase 1, Paso 4) | Sistema de diseño compartido |. Nota: Está creada, pero como hay que revisar todo, pues es una simple nota
+| `plataforma-ops` | ⬜ Pendiente (Fase 1, Paso 5) | Scripts gh CLI para las 26 apps | Nota: Está creada, pero como hay que revisar todo, pues es una simple nota
 
 ### Plantillas (repo `.github`)
 - `PULL_REQUEST_TEMPLATE.md`: checklist (tests, Conventional Commits, docs)
@@ -99,6 +101,8 @@
 | Gemini | Externo | Auditorías que requieran leer mucho código de golpe |
 | Composer/Sonic | Cursor (automático) | Autocompletado y ediciones rápidas |
 
+Nota: Configurar cada ia para que trabaje de la forma más eficaz posible.
+
 ### Flujo de trabajo con los modelos
 1. GPT-4o genera `docs/plan-maestro.md` (usando los prompts de `docs/prompts-plan-maestro-24-apps-rellenos.md`)
 2. El plan maestro se guarda en el repo de cada app
@@ -111,7 +115,9 @@
 3. Módulos de frontend
 4. Modelo de datos inicial
 5. Diferenciador frente a competencia
-6. Fases del roadmap
+6. Fases del roadmap.
+
+Nota: Se paso por Gemini el resultado de la app de uber y realizó mejor estudio. Pedir ese estudio para ver si se puede mejorar el promp o la estructura
 
 ### Estado de los planes maestros
 - ✅ Estudio de mercado completado (24 apps)
